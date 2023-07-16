@@ -8,3 +8,21 @@ body {
     height: 100vh;
     background-color: orange;
 }
+
+h1 {
+    text-align: center;
+}
+
+.memory-game-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    grid-gap: 10px;
+    margin: 50px;
+    justify-content: center;
+}
+
+.card {
+    height: 200px;
+    width: 150px;
+    background-color: black;
+}
