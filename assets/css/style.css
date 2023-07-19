@@ -20,6 +20,7 @@ h1 {
     margin: 50px;
     justify-content: center;
     border: 2px solid lime;
+    perspective: 1000px
 }
 
 .card {
@@ -28,6 +29,12 @@ h1 {
     width: 150px;
     background-color: rgb(32, 31, 45);
     border: 2px solid magenta;
+    transform-style: preserve-3d;
+    transition: transform 400ms ease-in-out;
+}
+
+.flip {
+    transform: rotateY(180deg)
 }
 
 .card-front, .card-back {
@@ -38,4 +45,9 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    backface-visibility: hidden;
+}
+
+.card-front {
+    transform: rotateY(180deg);
 }
