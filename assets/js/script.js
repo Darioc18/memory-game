@@ -11,8 +11,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
 let flippedCard = false;
 let firstCard, secondCard;
+let freezeGame;
 
 function flipCard() {
+  if (freezeGame) return;
+  if (this === firstCard) return;
+
   this.classList.add("flip");
 
   //first and second card clicks
@@ -31,10 +35,21 @@ function checkForMatch() {
   if (firstCard.id === secondCard.id) {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
+
+    resetBoard();
   } else {
+    freezeGame = true; //pause flip card function for 500ms
+
     setTimeout(() => {
       firstCard.classList.remove("flip");
       secondCard.classList.remove("flip");
+
+      resetBoard();
     }, 500);
   }
+}
+
+function resetBoard() {
+  [flippedCard, freezeGame] = [false, false];
+  [firstCard, secondCard] = [null, null];
 }
