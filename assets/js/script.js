@@ -32,7 +32,9 @@ function checkForMatch() {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
   } else {
-    firstCard.classList.remove("flip");
-    secondCard.classList.remove("flip");
+    setTimeout(() => {
+      firstCard.classList.remove("flip");
+      secondCard.classList.remove("flip");
+    }, 500);
   }
 }
