@@ -22,5 +22,17 @@ function flipCard() {
   } else {
     flippedCard = false;
     secondCard = this;
+
+    checkForMatch();
+  }
+}
+
+function checkForMatch() {
+  if (firstCard.id === secondCard.id) {
+    firstCard.removeEventListener("click", flipCard);
+    secondCard.removeEventListener("click", flipCard);
+  } else {
+    firstCard.classList.remove("flip");
+    secondCard.classList.remove("flip");
   }
 }
