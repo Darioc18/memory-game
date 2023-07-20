@@ -9,6 +9,18 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+let flippedCard = false;
+let firstCard, secondCard;
+
 function flipCard() {
-  this.classList.toggle("flip");
+  this.classList.add("flip");
+
+  //first and second card clicks
+  if (!flippedCard) {
+    flippedCard = true;
+    firstCard = this;
+  } else {
+    flippedCard = false;
+    secondCard = this;
+  }
 }
