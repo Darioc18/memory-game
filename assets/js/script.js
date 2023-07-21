@@ -7,6 +7,8 @@ document.addEventListener("DOMContentLoaded", function () {
   for (let card of cards) {
     card.addEventListener("click", flipCard);
   }
+
+  shuffleCards();
 });
 
 let flippedCard = false;
@@ -31,6 +33,7 @@ function flipCard() {
   }
 }
 
+//function to check for matches
 function checkForMatch() {
   if (firstCard.id === secondCard.id) {
     firstCard.removeEventListener("click", flipCard);
@@ -49,7 +52,18 @@ function checkForMatch() {
   }
 }
 
+// function to reset......!!!!!!!!!!!!!
 function resetBoard() {
   [flippedCard, freezeGame] = [false, false];
   [firstCard, secondCard] = [null, null];
+}
+
+function shuffleCards(cardsArray) {
+  cardsArray = [...document.querySelectorAll(".card")];
+  // Fisher-Yates Shuffle Algorithm
+  for (let i = cardsArray.length - 1; i > 0; i--) {
+    let randomIndex = Math.floor(Math.random() * (i + 1));
+    cardsArray[randomIndex].style.order = i;
+    cardsArray[i].style.order = randomIndex;
+  }
 }
