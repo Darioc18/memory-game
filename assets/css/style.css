@@ -58,3 +58,22 @@ h1 {
 .card-front {
     transform: rotateY(180deg);
 }
+
+.win-game {
+    flex-direction: column;
+    display: none;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0; 
+    color: red; 
+    background-color: rgb(0, 0, 0, 0.8);
+}
+
+.win-game.visible {
+    display: flex
+}
