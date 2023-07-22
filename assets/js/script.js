@@ -7,13 +7,14 @@ document.addEventListener("DOMContentLoaded", function () {
   for (let card of cards) {
     card.addEventListener("click", flipCard);
   }
-  // timer();
+  timer();
   shuffleCards();
 });
 
 let flippedCard = false;
 let firstCard, secondCard;
-let freezeGame;
+let freezeGame = false;
+let numberOfMatches = 0;
 
 function flipCard() {
   if (freezeGame) return;
@@ -45,7 +46,7 @@ function checkForMatch() {
   if (firstCard.id === secondCard.id) {
     firstCard.removeEventListener("click", flipCard);
     secondCard.removeEventListener("click", flipCard);
-
+    numberOfMatches += 1;
     resetBoard();
   } else {
     freezeGame = true; //pause flip card function for 500ms
@@ -53,12 +54,12 @@ function checkForMatch() {
     setTimeout(() => {
       firstCard.classList.remove("flip");
       secondCard.classList.remove("flip");
-
       resetBoard();
     }, 500);
   }
 
   addFlip();
+  if (numberOfMatches === 1) showWinOverlay();
 }
 
 function resetBoard() {
@@ -115,4 +116,9 @@ function addFlip() {
 
   flips++;
   flipCount.innerHTML = flips;
+}
+
+function showWinOverlay() {
+  pauseTimer();
+  document.getElementById("win-game").classList.add("visible");
 }
