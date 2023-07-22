@@ -120,5 +120,7 @@ function addFlip() {
 
 function showWinOverlay() {
   pauseTimer();
-  document.getElementById("win-game").classList.add("visible");
+  setTimeout(() => {
+    document.getElementById("win-game").classList.add("visible");
+  }, 400);
 }
