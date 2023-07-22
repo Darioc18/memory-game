@@ -79,13 +79,13 @@ function shuffleCards(cardsArray) {
 
 // setting a timer, I took inspiration from this: https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start
 
-function timer() {
-  let time;
-  let min = 0;
-  let sec = 0;
-  let formattedSec = "0";
-  let count = document.getElementById("timer");
+let time;
+let min = 0;
+let sec = 0;
+let formattedSec = "0";
+let count = document.getElementById("timer");
 
+function timer() {
   time = setInterval(function () {
     sec++;
     if (sec === 60) {
