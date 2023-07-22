@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   for (let card of cards) {
     card.addEventListener("click", flipCard);
   }
-  timer();
+  // timer();
   shuffleCards();
 });
 
@@ -33,6 +33,13 @@ function flipCard() {
   }
 }
 
+// function startTimer() {
+//   let attFirstCard = firstCard.getAttribute("class");
+//   if (attFirstCard === "card flip first") {
+//     timer();
+//   }
+// }
+
 //function to check for matches
 function checkForMatch() {
   if (firstCard.id === secondCard.id) {
@@ -50,9 +57,10 @@ function checkForMatch() {
       resetBoard();
     }, 500);
   }
+
+  addFlip();
 }
 
-// function to reset......!!!!!!!!!!!!!
 function resetBoard() {
   [flippedCard, freezeGame] = [false, false];
   [firstCard, secondCard] = [null, null];
@@ -69,29 +77,42 @@ function shuffleCards(cardsArray) {
 }
 
 // setting a timer, I took inspiration from this: https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start
-let time;
-let min = 0;
-let sec = 0;
-
-let count = document.getElementById("timer");
 
 function timer() {
+  let time;
+  let min = 0;
+  let sec = 0;
+  let formattedSec = "0";
+  let count = document.getElementById("timer");
+
   time = setInterval(function () {
     sec++;
     if (sec === 60) {
       min++;
       sec = 0;
     }
+    // make the timer format 0:00
 
-    let formattedSec = "0";
     if (sec < 10) {
       count.innerHTML = min + ":" + formattedSec + sec;
     } else {
       count.innerHTML = min + ":" + sec;
     }
   }, 1000); // each 1 second
+
+  if ((flippedCard = false)) return;
 }
 
-function pause() {
-  clearInterval(timer);
+function pauseTimer() {
+  clearInterval(time);
+}
+
+// add flips count
+let flips = 0;
+
+function addFlip() {
+  let flipCount = document.getElementById("flips");
+
+  flips++;
+  flipCount.innerHTML = flips;
 }
