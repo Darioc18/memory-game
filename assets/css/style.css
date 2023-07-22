@@ -23,6 +23,13 @@ h1 {
     perspective: 1000px
 }
 
+.feature-container {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: space-between;
+
+}
+
 .card {
     position: relative;
     height: 200px;
