@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   for (let card of cards) {
     card.addEventListener("click", flipCard);
   }
-
+  timer();
   shuffleCards();
 });
 
@@ -66,4 +66,32 @@ function shuffleCards(cardsArray) {
     cardsArray[randomIndex].style.order = i;
     cardsArray[i].style.order = randomIndex;
   }
+}
+
+// setting a timer, I took inspiration from this: https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start
+let time;
+let min = 0;
+let sec = 0;
+
+let count = document.getElementById("timer");
+
+function timer() {
+  time = setInterval(function () {
+    sec++;
+    if (sec === 60) {
+      min++;
+      sec = 0;
+    }
+
+    let formattedSec = "0";
+    if (sec < 10) {
+      count.innerHTML = min + ":" + formattedSec + sec;
+    } else {
+      count.innerHTML = min + ":" + sec;
+    }
+  }, 1000); // each 1 second
+}
+
+function pause() {
+  clearInterval(timer);
 }
