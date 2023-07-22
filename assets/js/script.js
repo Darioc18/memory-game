@@ -59,7 +59,8 @@ function checkForMatch() {
   }
 
   addFlip();
-  if (numberOfMatches === 1) showWinOverlay();
+
+  if (numberOfMatches === 8) showWinOverlay();
 }
 
 function resetBoard() {
@@ -109,11 +110,11 @@ function pauseTimer() {
 }
 
 // add flips count
+
 let flips = 0;
+let flipCount = document.getElementById("flips");
 
 function addFlip() {
-  let flipCount = document.getElementById("flips");
-
   flips++;
   flipCount.innerHTML = flips;
 }
@@ -124,3 +125,32 @@ function showWinOverlay() {
     document.getElementById("win-game").classList.add("visible");
   }, 400);
 }
+
+function resetGame() {
+  resetBoard();
+  pauseTimer();
+
+  numberOfMatches = 0;
+
+  min = 0;
+  sec = -1;
+  count.innerHTML = "0:00";
+  flips = 0;
+  flipCount.innerHTML = "0";
+
+  document.querySelectorAll(".card").forEach((card) => {
+    card.classList.remove("flip");
+  }); //will make all cards turn back down
+
+  shuffleCards();
+
+  document.querySelectorAll(".card").forEach((card) => {
+    card.addEventListener("click", flipCard);
+  }); //will allow click on cards again
+
+  document.getElementById("win-game").classList.remove("visible");
+  timer();
+}
+
+let reset = document.getElementById("restart");
+reset.addEventListener("click", resetGame);
