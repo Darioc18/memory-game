@@ -9,6 +9,16 @@ body {
     background-color: orange;
 }
 
+.hero {
+    position: absolute;
+    height: 100vh;
+    z-index: -1;
+    object-fit: cover;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
 h1 {
     text-align: center;
 }
@@ -17,7 +27,7 @@ h1 {
     display: grid;
     grid-template-columns: repeat(4, auto);
     grid-gap: 10px;
-    margin: 50px;
+    margin: 30px;
     justify-content: center;
     border: 2px solid lime;
     perspective: 1000px
@@ -57,6 +67,16 @@ h1 {
 
 .card-front {
     transform: rotateY(180deg);
+}
+
+.restart-button {
+    text-decoration: none;
+    border: 2px solid blue;
+    grid-row: 6 / 7;
+    grid-column: -5 / -1;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
 }
 
 .win-game {
