@@ -152,5 +152,7 @@ function resetGame() {
   timer();
 }
 
-let reset = document.getElementById("restart");
-reset.addEventListener("click", resetGame);
+let resetButtons = document.querySelectorAll(".restart-button");
+resetButtons.forEach((reset) => {
+  reset.addEventListener("click", resetGame);
+});
