@@ -112,17 +112,23 @@ function pauseTimer() {
 // add flips count
 
 let flips = 0;
-let flipCount = document.getElementById("flips");
+let flipCounter = document.getElementById("flips");
 
 function addFlip() {
   flips++;
-  flipCount.innerHTML = flips;
+  flipCounter.innerHTML = flips;
 }
 
+// win pop-up screen
 function showWinOverlay() {
   pauseTimer();
   setTimeout(() => {
     document.getElementById("win-game").classList.add("visible");
+
+    totalTime = count.innerHTML;
+
+    document.getElementById("total-moves").innerHTML = flips;
+    document.getElementById("total-time").innerHTML = totalTime;
   }, 400);
 }
 
@@ -136,7 +142,7 @@ function resetGame() {
   sec = -1;
   count.innerHTML = "0:00";
   flips = 0;
-  flipCount.innerHTML = "0";
+  flipCounter.innerHTML = "0";
 
   document.querySelectorAll(".card").forEach((card) => {
     card.classList.remove("flip");
