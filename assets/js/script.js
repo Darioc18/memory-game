@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
   for (let card of cards) {
     card.addEventListener("click", flipCard);
   }
-  timer();
+
   shuffleCards();
 });
 
@@ -15,14 +15,30 @@ let flippedCard = false;
 let firstCard, secondCard;
 let freezeGame = false;
 let numberOfMatches = 0;
+let timeStarted = false;
+
+/** Start timer only when the first card is flipped
+ *  to implement this I took inspiration from:
+ *  https://stackoverflow.com/questions/68211977/how-to-invoke-a-function-on-only-the-first-click */
+function onClick() {
+  if (!timeStarted) {
+    timeStarted = true;
+    timer();
+  }
+}
 
 function flipCard() {
+  onClick();
+
   if (freezeGame) return;
   if (this === firstCard) return;
 
   this.classList.add("flip");
 
-  //first and second card clicks
+  /** Get first and second card info
+   *  to implement this I used the following link as reference:
+   *  https://marina-ferreira.github.io/tutorials/js/memory-game/#:~:text=if%20(!hasFlippedCard)%20%7B%0A%20%20%20%20%20%20hasFlippedCard%20%3D%20true%3B%0A%20%20%20%20%20%20firstCard%20%3D%20this%3B%0A%2B%20%20%20%20%20return%3B%0A%2B%20%20%20%7D%0A%2B%0A%2B%20%20%20secondCard%20%3D%20this%3B%0A%2B%20%20%20hasFlippedCard%20%3D%20false%3B%0A%2B
+   */
   if (!flippedCard) {
     flippedCard = true;
     firstCard = this;
@@ -34,14 +50,7 @@ function flipCard() {
   }
 }
 
-// function startTimer() {
-//   let attFirstCard = firstCard.getAttribute("class");
-//   if (attFirstCard === "card flip first") {
-//     timer();
-//   }
-// }
-
-//function to check for matches
+// Function to check for matches
 function checkForMatch() {
   if (firstCard.id === secondCard.id) {
     firstCard.removeEventListener("click", flipCard);
@@ -49,7 +58,7 @@ function checkForMatch() {
     numberOfMatches += 1;
     resetBoard();
   } else {
-    freezeGame = true; //pause flip card function for 500ms
+    freezeGame = true; // Pause flip card function for 500ms
 
     setTimeout(() => {
       firstCard.classList.remove("flip");
@@ -78,7 +87,10 @@ function shuffleCards(cardsArray) {
   }
 }
 
-// setting a timer, I took inspiration from this: https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start
+/** Setting a timer
+ *  to implement this I took inspiration from this link:
+ *  https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start
+ */
 
 let time;
 let min = 0;
@@ -93,14 +105,14 @@ function timer() {
       min++;
       sec = 0;
     }
-    // make the timer format 0:00
+    // Make the timer format 0:00
 
     if (sec < 10) {
       count.innerHTML = min + ":" + formattedSec + sec;
     } else {
       count.innerHTML = min + ":" + sec;
     }
-  }, 1000); // each 1 second
+  }, 1000); // Each 1 second
 
   if ((flippedCard = false)) return;
 }
@@ -109,7 +121,7 @@ function pauseTimer() {
   clearInterval(time);
 }
 
-// add flips count
+// Add flips count
 
 let flips = 0;
 let flipCounter = document.getElementById("flips");
@@ -119,7 +131,7 @@ function addFlip() {
   flipCounter.innerHTML = flips;
 }
 
-// win pop-up screen
+// Implement win pop-up screen
 function showWinOverlay() {
   pauseTimer();
   setTimeout(() => {
@@ -146,13 +158,13 @@ function resetGame() {
 
   document.querySelectorAll(".card").forEach((card) => {
     card.classList.remove("flip");
-  }); //will make all cards turn back down
+  }); // Will make all cards turn back down
 
   shuffleCards();
 
   document.querySelectorAll(".card").forEach((card) => {
     card.addEventListener("click", flipCard);
-  }); //will allow click on cards again
+  }); // Will allow click on cards again
 
   document.getElementById("win-game").classList.remove("visible");
   timer();
