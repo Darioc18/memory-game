@@ -69,7 +69,7 @@ function checkForMatch() {
 
   addFlip();
 
-  if (numberOfMatches === 8) showWinOverlay();
+  if (numberOfMatches === 1) showWinOverlay();
 }
 
 function resetBoard() {
@@ -145,6 +145,7 @@ function showWinOverlay() {
 }
 
 function resetGame() {
+  timeStarted = false;
   resetBoard();
   pauseTimer();
 
@@ -167,7 +168,6 @@ function resetGame() {
   }); // Will allow click on cards again
 
   document.getElementById("win-game").classList.remove("visible");
-  timer();
 }
 
 let resetButtons = document.querySelectorAll(".restart-button");
