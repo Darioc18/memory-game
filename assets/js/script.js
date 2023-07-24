@@ -69,7 +69,7 @@ function checkForMatch() {
 
   addFlip();
 
-  if (numberOfMatches === 1) showWinOverlay();
+  if (numberOfMatches === 8) showWinOverlay();
 }
 
 function resetBoard() {
