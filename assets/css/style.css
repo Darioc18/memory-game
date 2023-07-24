@@ -1,36 +1,66 @@
+@import url('https://fonts.cdnfonts.com/css/harry-potter');
+@import url('https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap');
+
 * {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    letter-spacing: 2px;
+    --color1: rgb(255, 237, 210);
+    --color2: rgb(32, 31, 45);
+    --color3: rgb(0, 0, 0, 0.9);
+    --color4: rgb(0, 0, 0, 0.9);
 }
 
 body {
     height: 100vh;
-    background-color: orange;
+    overflow: hidden;   
 }
 
-.hero {
-    position: absolute;
-    height: 100vh;
+#hero-image {    
+    background-image: url(../images/background.png);
+    background-repeat: repeat-x;
     z-index: -1;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100vh;
     object-fit: cover;
     display: flex;
-    justify-items: center;
-    align-items: center;
+    justify-content: center;
 }
 
-h1 {
+/* .hero {    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+    object-fit: fill;
+    border: 2px solid magenta;
+    float: right;
+} */
+
+.game-title {
     text-align: center;
+    font-family: 'Harry Potter', sans-serif;
+    padding: 10px;
+    font-size: 300%;
+    color: var(--color1);
+}
+
+.feature {
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 130%;
+    color: var(--color1);
 }
 
 .memory-game-container {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    grid-gap: 10px;
-    margin: 30px;
+    grid-gap: 15px;
+    margin: 20px;
     justify-content: center;
-    border: 2px solid lime;
-    perspective: 1000px
+    perspective: 1000px;
 }
 
 .feature-container {
@@ -42,12 +72,19 @@ h1 {
 
 .card {
     position: relative;
-    height: 200px;
-    width: 150px;
-    background-color: rgb(32, 31, 45);
-    border: 2px solid magenta;
+    height: 150px;
+    width: 110px;
+    background-color: var(--color2);
+    outline: 2px solid var(--color1);
     transform-style: preserve-3d;
     transition: transform 400ms ease-in-out;
+    cursor: pointer;
+    border-radius: 5%;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px var(--color1),
+                0 0 20px var(--color1);
 }
 
 .flip {
@@ -70,16 +107,49 @@ h1 {
 }
 
 .restart-button {
-    text-decoration: none;
-    border: 2px solid blue;
     grid-row: 6 / 7;
     grid-column: -5 / -1;
     display: flex;
     justify-content: center;
     cursor: pointer;
+    font-family: 'Yusei Magic', sans-serif;
+    font-size: 150%;
+    font-weight: 700;
+    color: var(--color1);    
 }
 
+.restart-button:hover {
+    text-shadow: 0 0 10px var(--color1),
+                 0 0 20px var(--color1),
+                 0 0 40px var(--color1),
+                 0 0 80px var(--color1);
+}
+
+#overlay-win-game .restart-button{
+    animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+    from {
+        text-shadow: 0 0 30px var(--color1),
+                     0 0 50px var(--color1),
+                     0 0 60px var(--color1);
+    }
+    to {
+        text-shadow: 0 0 10px var(--color1),
+                     0 0 20px var(--color1),
+                     0 0 40px var(--color1);
+    }
+  }
+
+  #overlay-win-game .restart-button:hover {
+    animation-duration: 0s;
+  }
+
 .win-game {
+    text-align: center;
+    font-family: 'Yusei Magic', sans-serif;
+    color: var(--color1);
     flex-direction: column;
     display: none;
     position: fixed;
@@ -90,10 +160,36 @@ h1 {
     left: 0;
     right: 0;
     bottom: 0; 
-    color: red; 
-    background-color: rgb(0, 0, 0, 0.8);
+    background-color: var(--color4);
 }
+
+#overlay-win-game > h2  {
+    font-size: 250%;
+    font-weight: 700;
+}
+
+#overlay-win-game > p  {
+    font-size: 130%;
+}
+
 
 .win-game.visible {
     display: flex
+}
+
+#win-hat {
+    height: 200px;
+    width: 200px;
+    margin: auto;
+}
+
+.social {
+    text-align: center;
+    font-size: 200%;
+    color: var(--color1);
+    margin-top: 50px;
+}
+
+.social a {
+    color: var(--color1);
 }
