@@ -7,13 +7,18 @@
 
     <link rel="stylesheet" href="assets/css/style.css" />
   </head>
-  <h1 class="game-title">Memory Game</h1>
   <body>
-    <img class="hero" src="" alt="background image" />
+    <header>
+      <h1 class="game-title">Wizarding Memory Quest</h1>
+    </header>
+    <!-- <img class="hero" src="assets/images/background.png" alt="" /> -->
+    <section id="hero-outer">
+      <div id="hero-image"></div>
+    </section>
     <section class="memory-game-container">
       <div class="feature-container">
-        <div class="feature">Time: <span id="timer">0:00</span></div>
-        <div class="feature">Flips: <span id="flips">0</span></div>
+        <div class="feature">Time <span id="timer">0:00</span></div>
+        <div class="feature">Flips <span id="flips">0</span></div>
       </div>
 
       <div class="card" id="dobby">
@@ -101,13 +106,38 @@
 
     <section class="win-game" id="win-game">
       <div id="overlay-win-game">
-        <h2>Congrats</h2>
-        <p>you made <span id="total-moves">moves</span> moves</p>
-        <p>in <span id="total-time">time</span></p>
-        <button class="restart-button">Restart Game</button>
+        <img src="assets/images/win-img.png" alt="" id="win-hat" />
+        <h2>Magic! You've won!</h2>
+        <p>
+          You've made <span id="total-moves">0</span> moves in
+          <span id="total-time">time</span>
+        </p>
+        <br />
+        <div class="restart-button">Reset Game</div>
       </div>
     </section>
 
+    <div class="social">
+      <a
+        href="https://github.com/Darioc18/memory-game"
+        target="_blank"
+        rel="noopener"
+        aria-label="Visit my Github page (opens in a new tab)"
+        ><i class="fa-brands fa-github"></i
+      ></a>
+      <a
+        href="www.linkedin.com/in/dariocovella"
+        target="_blank"
+        rel="noopener"
+        aria-label="Visit my Linkedin profile (opens in a new tab)"
+        ><i class="fa-brands fa-linkedin"></i
+      ></a>
+    </div>
+
     <script src="assets/js/script.js"></script>
+    <script
+      src="https://kit.fontawesome.com/c355300088.js"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
