@@ -20,25 +20,14 @@ body {
 #hero-image {    
     background-image: url(../images/background.png);
     background-repeat: repeat-x;
+    background-size: contain;
     z-index: -1;
-    position: absolute;
     bottom: 0;
-    width: 100%;
+    position: absolute;
     height: 100vh;
-    object-fit: cover;
+    width: 100%;    
     display: flex;
-    justify-content: center;
 }
-
-/* .hero {    
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    z-index: -1;
-    object-fit: fill;
-    border: 2px solid magenta;
-    float: right;
-} */
 
 .game-title {
     text-align: center;
@@ -129,19 +118,6 @@ body {
     animation: glow 1s ease-in-out infinite alternate;
 }
 
-@-webkit-keyframes glow {
-    from {
-        text-shadow: 0 0 30px var(--color1),
-                     0 0 50px var(--color1),
-                     0 0 60px var(--color1);
-    }
-    to {
-        text-shadow: 0 0 10px var(--color1),
-                     0 0 20px var(--color1),
-                     0 0 40px var(--color1);
-    }
-  }
-
   #overlay-win-game .restart-button:hover {
     animation-duration: 0s;
   }
@@ -192,4 +168,88 @@ body {
 
 .social a {
     color: var(--color1);
+}
+
+/* Keyframe for glowing Restart button */
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 30px var(--color1),
+                     0 0 50px var(--color1),
+                     0 0 60px var(--color1);
+    }
+    to {
+        text-shadow: 0 0 10px var(--color1),
+                     0 0 20px var(--color1),
+                     0 0 40px var(--color1);
+    }
+  }
+
+/* Media queries */
+
+@media (max-width: 1600px) {
+    .game-title {
+        font-size: 200%;
+    }
+
+    .card {
+        height: 110px;
+        width: calc(110px/3*2)
+    }
+
+    .feature {
+        font-size: 100%;
+    }
+
+    .restart-button {
+        font-size: 130%;
+    }
+
+    #hero-image{
+        background-size: cover;
+    }
+
+    .social {
+        margin-top: 20px;
+        font-size: 150%;
+    }
+
+}
+
+@media (max-width: 500px) {
+    .game-title {
+        font-size: 130%;
+    }
+
+    .card {
+        height: 80px;
+        width: calc(80px/3*2)
+    }
+
+    .feature {
+        font-size: 50%;
+    }
+
+    .restart-button {
+        font-size: 65%;
+    }
+
+    #hero-image{
+        background-image: url(../images/background-mobile.png);        
+        background-repeat: no-repeat;
+        background-size: auto;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .social {
+        margin-top: 5px;
+        font-size: 100%;        
+    }
+
+    .body {
+        overflow: scroll;
+    }
+
 }
