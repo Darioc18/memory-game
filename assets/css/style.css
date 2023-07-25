@@ -318,3 +318,52 @@ body {
         font-size: 120%;
     }
 }
+
+/* Implementing media query for mobile landscape mode orientation */
+@media screen and (orientation: landscape) and (max-height: 400px) {
+    .memory-game-container{
+        grid-template-columns: repeat(8, auto); 
+        margin: 10px;
+        grid-gap: 10px
+    }
+
+    .game-title {
+        font-size: 150%;
+    }
+
+    .card {
+        height: 90px;
+        width: calc(90px/15*11)
+    }
+
+    .feature {
+        font-size: 80%;
+    }
+
+    .restart-button {
+        grid-row: 4 / 5;
+        grid-column: 1 / -1;
+        display: flex;
+        justify-content: center;
+        font-size: 100%;
+    }
+
+    #hero-image{
+        background-image: url(../images/background.png);          
+        background-size: contain;
+    }
+
+    .social {
+        margin-top: 5px;
+        font-size: 100%;        
+    }
+
+    #overlay-win-game > h2  {
+        font-size: 200%;
+        font-weight: 700;
+    }
+
+    #overlay-win-game > p  {
+        font-size: 120%;
+    }
+}
