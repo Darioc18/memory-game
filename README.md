@@ -29,3 +29,8 @@ Target User for "Wizarding Memory Quest":
 - Interested in competing with others
 
 ## Design
+
+### Wireframes
+
+Presented below are a series of wireframes illustrating the game's visual representation across a computer webpage and a mobile screen.
+![Wireframes](assets/images/README%20images/wireframes.png)
