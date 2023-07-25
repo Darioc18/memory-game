@@ -16,132 +16,142 @@
     <link rel="icon" type="image/x-icon" href="assets/images/favicon.png" />
   </head>
   <body>
+    <!-- Title of the game -->
     <header>
       <h1 class="game-title">Wizarding Memory Quest</h1>
     </header>
-    <!-- <img class="hero" src="assets/images/background.png" alt="" /> -->
-    <section id="hero-outer">
-      <div id="hero-image"></div>
-    </section>
-    <section class="memory-game-container">
-      <div class="feature-container">
-        <div class="feature">Time <span id="timer">0:00</span></div>
-        <div class="feature">Flips <span id="flips">0</span></div>
+
+    <!-- Body of the game with cards and 'Time', 'Flips', and 'Reset' features  -->
+    <main>
+      <!-- Hero image. Image added in CSS -->
+      <div id="hero-outer">
+        <div id="hero-image"></div>
       </div>
+      <!-- 'Time' and 'Flip' features ' -->
+      <div class="memory-game-container">
+        <div class="feature-container">
+          <div class="feature">Time <span id="timer">0:00</span></div>
+          <div class="feature">Flips <span id="flips">0</span></div>
+        </div>
 
-      <div class="card" data-card-id="dobby">
-        <img src="assets/images/dobby.png" alt="dobby" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <!-- Set of 16 cards -->
+        <div class="card" data-card-id="dobby">
+          <img src="assets/images/dobby.png" alt="dobby" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="dobby">
-        <img src="assets/images/dobby.png" alt="dobby" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="dobby">
+          <img src="assets/images/dobby.png" alt="dobby" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="edvige">
-        <img src="assets/images/edvige.png" alt="edvige" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="edvige">
+          <img src="assets/images/edvige.png" alt="edvige" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="edvige">
-        <img src="assets/images/edvige.png" alt="edvige" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="edvige">
+          <img src="assets/images/edvige.png" alt="edvige" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="golden-snitch">
-        <img
-          src="assets/images/golden-snitch.png"
-          alt="golden-snitch"
-          class="card-front"
-        />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="golden-snitch">
+          <img
+            src="assets/images/golden-snitch.png"
+            alt="golden-snitch"
+            class="card-front"
+          />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="golden-snitch">
-        <img
-          src="assets/images/golden-snitch.png"
-          alt="golden-snitch"
-          class="card-front"
-        />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="golden-snitch">
+          <img
+            src="assets/images/golden-snitch.png"
+            alt="golden-snitch"
+            class="card-front"
+          />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="harry">
-        <img src="assets/images/harry.png" alt="harry" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="harry">
+          <img src="assets/images/harry.png" alt="harry" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="harry">
-        <img src="assets/images/harry.png" alt="harry" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="harry">
+          <img src="assets/images/harry.png" alt="harry" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="hat">
-        <img src="assets/images/hat.png" alt="hat" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="hat">
+          <img src="assets/images/hat.png" alt="hat" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="hat">
-        <img src="assets/images/hat.png" alt="hat" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="hat">
+          <img src="assets/images/hat.png" alt="hat" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="platform">
-        <img
-          src="assets/images/platform.png"
-          alt="platform"
-          class="card-front"
-        />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="platform">
+          <img
+            src="assets/images/platform.png"
+            alt="platform"
+            class="card-front"
+          />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="platform">
-        <img
-          src="assets/images/platform.png"
-          alt="platform"
-          class="card-front"
-        />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="platform">
+          <img
+            src="assets/images/platform.png"
+            alt="platform"
+            class="card-front"
+          />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="pot">
-        <img src="assets/images/pot.png" alt="pot" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="pot">
+          <img src="assets/images/pot.png" alt="pot" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="pot">
-        <img src="assets/images/pot.png" alt="pot" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="pot">
+          <img src="assets/images/pot.png" alt="pot" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="stone">
-        <img src="assets/images/stone.png" alt="stone" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="stone">
+          <img src="assets/images/stone.png" alt="stone" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="card" data-card-id="stone">
-        <img src="assets/images/stone.png" alt="stone" class="card-front" />
-        <img src="assets/images/back.png" alt="card-back" class="card-back" />
-      </div>
+        <div class="card" data-card-id="stone">
+          <img src="assets/images/stone.png" alt="stone" class="card-front" />
+          <img src="assets/images/back.png" alt="card-back" class="card-back" />
+        </div>
 
-      <div class="restart-button">Reset Game</div>
-    </section>
-
-    <section class="win-game" id="win-game">
-      <div id="overlay-win-game">
-        <img src="assets/images/win-img.png" alt="" id="win-hat" />
-        <h2>Magic! You've won!</h2>
-        <p>
-          You've made <span id="total-moves">0</span> moves in
-          <span id="total-time">time</span>
-        </p>
-        <br />
+        <!-- Restart button -->
         <div class="restart-button">Reset Game</div>
       </div>
-    </section>
 
-    <div class="social">
+      <!-- Win pop-up screen -->
+      <div class="win-game" id="win-game">
+        <div id="overlay-win-game">
+          <img src="assets/images/win-img.png" alt="" id="win-hat" />
+          <h2>Magic! You've won!</h2>
+          <p>
+            You've made <span id="total-moves">0</span> moves in
+            <span id="total-time">time</span>
+          </p>
+          <br />
+          <div class="restart-button">Reset Game</div>
+        </div>
+      </div>
+    </main>
+
+    <!-- Github and Linkedin contacts -->
+    <footer class="social">
       <a
         href="https://github.com/Darioc18/memory-game"
         target="_blank"
@@ -156,7 +166,7 @@
         aria-label="Visit my Linkedin profile (opens in a new tab)"
         ><i class="fa-brands fa-linkedin"></i
       ></a>
-    </div>
+    </footer>
 
     <script src="assets/js/script.js"></script>
     <script
