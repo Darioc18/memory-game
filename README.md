@@ -34,3 +34,10 @@ Target User for "Wizarding Memory Quest":
 
 Presented below are a series of wireframes illustrating the game's visual representation across a computer webpage and a mobile screen.
 ![Wireframes](assets/images/README%20images/wireframes.png)
+
+### Colours
+
+For the color palette, I drew inspiration from the existing color palette used in the images of the cards. This allowed me to create a harmonious and cohesive set of colors for the game.
+I created a visual palette by using [coolors.co](https://coolors.co).
+
+![Color palette](assets/images/readme-images/palette.png)
