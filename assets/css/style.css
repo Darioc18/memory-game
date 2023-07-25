@@ -217,21 +217,75 @@ body {
 }
 
 @media (max-width: 500px) {
+    .memory-game-container{
+        margin: 10px;
+    }
+
+    .game-title {
+        font-size: 200%;
+    }
+
+    .card {
+        height: 90px;
+        width: calc(90px/3*2)
+    }
+
+    .feature {
+        font-size: 80%;
+    }
+
+    .restart-button {
+        font-size: 120%;
+    }
+
+    #hero-image{
+        background-image: url(../images/background-mobile.png);        
+        background-repeat: no-repeat;
+        background-size: auto;
+        height: 100vh;
+        width: 100%;
+        background-size: cover;
+    }
+
+    .social {
+        margin-top: 20px;
+        font-size: 100%;        
+    }
+
+    .body {
+        overflow: scroll;
+    }
+
+    #overlay-win-game > h2  {
+        font-size: 200%;
+        font-weight: 700;
+    }
+
+    #overlay-win-game > p  {
+        font-size: 120%;
+    }
+}
+
+@media (max-width: 350px) {
+    .memory-game-container{
+        margin: 10px;
+    }
+
     .game-title {
         font-size: 130%;
     }
 
     .card {
-        height: 80px;
-        width: calc(80px/3*2)
+        height: 90px;
+        width: calc(90px/3*2)
     }
 
     .feature {
-        font-size: 50%;
+        font-size: 80%;
     }
 
     .restart-button {
-        font-size: 65%;
+        font-size: 100%;
     }
 
     #hero-image{
@@ -252,4 +306,12 @@ body {
         overflow: scroll;
     }
 
+    #overlay-win-game > h2  {
+        font-size: 200%;
+        font-weight: 700;
+    }
+
+    #overlay-win-game > p  {
+        font-size: 120%;
+    }
 }
