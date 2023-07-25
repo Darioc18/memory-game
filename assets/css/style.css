@@ -42,7 +42,8 @@ body {
 
 .feature {
     font-family: 'Yusei Magic', sans-serif;
-    font-size: 130%;
+    font-size: 150%;
+    font-weight: 700;
     color: var(--color1);
 }
 
@@ -105,7 +106,7 @@ body {
     justify-content: center;
     cursor: pointer;
     font-family: 'Yusei Magic', sans-serif;
-    font-size: 150%;
+    font-size: 170%;
     font-weight: 700;
     color: var(--color1);    
 }
@@ -121,7 +122,7 @@ body {
     animation: glow 1s ease-in-out infinite alternate;
 }
 
-  #overlay-win-game .restart-button:hover {
+#overlay-win-game .restart-button:hover {
     animation-duration: 0s;
   }
 
