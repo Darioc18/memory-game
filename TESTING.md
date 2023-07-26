@@ -18,18 +18,26 @@ In order to confirm the correct functionality:
 | Homepage footer               | Click on the 'Github' and 'Linkedin' icons | The user is redirected to the corresponding Github or Linkedin profile in another tab                           | ✔      | ✔      |
 | Homepage / Win overlay screen | Flip all the matching cards                | A semi-transparent win pop-up window displays the time taken to complete the game and the number of flips made. | ✔      | ✔      |
 | Win overlay screen            | Click on the 'Reset' button                | The user gets redirected to the home page and both the timer and the flip counter are reset to zero             | ✔      | ✔      |
+| 404 page                      | Click on the 'Alohomora' button            | The user gets redirected to the home page and both the timer and the flip counter are reset to zero             | ✔      | ✔      |
 
 ## Validator testing
 
 The website has been run through the W3C Markup validation service CSS validation service, and JSHint:
 
-- HTML: No errors were returned when passing through the official [W3C HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarioc18.github.io%2Fmemory-game%2F)
-- CSS: No errors were returned when passing through the official [W3C CSS validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdarioc18.github.io%2Fmemory-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
-- Javascript: No errors were returned when passing through the official
-  ![JSHint validator](assets/images/readme-images/jshint-validator.png)
+- Homepage
+  - HTML: No errors were returned when passing through the official [W3C HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarioc18.github.io%2Fmemory-game%2F)
+  - CSS: No errors were returned when passing through the official [W3C CSS validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdarioc18.github.io%2Fmemory-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
+  - Javascript: No errors were returned when passing through the official
+    ![JSHint validator](assets/images/readme-images/jshint-validator.png)
+- 404 Page
+  - HTML: No errors were returned when passing through the official [W3C HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarioc18.github.io%2Fmemory-game%2F404)
 
-  ## Lighthouse
+## Lighthouse
 
-  Google Lighthouse in Google's Chrome Developer Tools was used to test the performance of the website. All elements performed well.
+Google Lighthouse in Google's Chrome Developer Tools was used to test the performance of the website. All elements performed well.
+
+- Homepage:
   ![Performance test using Lighthouse](assets/images/readme-images/lighthouse.png)
-  |
+
+- 404 Page:
+  ![Performance test using Lighthouse](assets/images/readme-images/lighthouse-404-page.png)
