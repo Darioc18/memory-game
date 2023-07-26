@@ -135,7 +135,7 @@ Throughout the coding process of this website, great attention has been given to
 
 - Adding aria-label to anchor elements: The use of aria-label attributes for links and icons enhances accessibility by providing additional information or descriptions that are not explicitly conveyed through visual elements alone.
 
-- Verifying visibility with a contrast checker by inputting the appropriate RGB color values.
+- Verifying visibility with a contrast checker by inputting the RGB color values of the text and the background.
 
 ![Color contrast checker](assets/images/readme-images/color-contrast-checker.PNG)
 
