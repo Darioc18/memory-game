@@ -110,3 +110,60 @@ With these considerations, I aimed to make the website more accessible and user-
 ## Testing
 
 Please refer to the [TESTING.md](TESTING.md) file for all test-related documentation.
+
+## Bugs solved
+
+| N.  | Bug                                                                                                                                                                                                                                                                                                 | Solution                                                                                                                                                                                                                                                                          |
+| --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| 1   | My aim was to initiate the timer when the user clicked on the first card, so I inserted the `function timer()` within the `function flipCard()`. However, I noticed that the timer malfunctioned, accelerating each time I clicked on every other card.                                             | I found a solution on [Stack Overflow](https://stackoverflow.com/questions/68211977/how-to-invoke-a-function-on-only-the-first-click). By creating a boolean variable and implementing a check within the timer function, the issue was fixed, ensuring the timer worked properly |
+| 2   | I encountered a bug related to background images. I chose to include the background images through CSS instead of HTML, as I planned to update the image for specific media queries. However, I faced some issues in controlling the size and position of the background images using `object-fit`. | I used `background-size`, which specifically manages background elements in CSS. Unlike `object-fit`, which applies only to HTML `<img>` elements.                                                                                                                                |
+| 3   | Clicking on the last two matching cards triggered the win screen to appear before the card flipping animation was completed.                                                                                                                                                                        | To resolve this issue, I implemented a solution using the `setTimeout` global function. By introducing a delay, I ensured that the win pop-up screen would only appear after the card flipping animation had finished.                                                            |
+
+## Technologies Used
+
+- Languages
+  - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
+  - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
+- Frameworks and Porgrams
+  - [Git](https://developer.mozilla.org/en-US/docs/Glossary/Git)
+  - [Github Pages](https://github.com/)
+  - [Visual Studio Code](https://code.visualstudio.com/)
+  - [Google Dev Tools](https://developer.chrome.com/docs/devtools/open/)
+  - [Google Lighthouse](https://developer.chrome.com/docs/lighthouse/overview/)
+  - [Google Fonts](https://fonts.google.com/)
+  - [CDN Fonts](https://www.cdnfonts.com/)
+  - [Font Awesome](https://fontawesome.com/)
+  - [Balsamiq](https://balsamiq.com/wireframes/)
+  - [Am I Responsive?](https://ui.dev/amiresponsive)
+  - [W3C Markup Validation Service](https://validator.w3.org/)
+  - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
+  - [JSHint](https://jshint.com/)
+  - [Favicon.io](https://favicon.io/)
+
+## Deployment
+
+The website was successfully deployed using GitHub Pages.
+
+- To deploy the website, follow these steps:
+
+  1.  Go to the GitHub repository and navigate to the _Settings_ tab;
+  2.  On the left-hand menu, select _Pages_;
+  3.  In the _Source_ section, choose the branch _main_;
+  4.  Click _Save_ to save the changes;
+  5.  After saving, the web page will automatically refresh. Once refreshed, a ribbon at the top of the page appears stating: _Your site is live at https://darioc18.github.io/memory-game/_.
+
+- To fork the repository:
+
+  1.  Go to the [GitHub repository](https://github.com/Darioc18/memory-game);
+  2.  In the top-right corner of the page, click _Fork_;
+  3.  Optionally type the _Repository name_ and _Description_;
+  4.  Click the green button _Create fork_.
+
+- To clone the repository:
+  1. Go to the [GitHub repository](https://github.com/Darioc18/memory-game);
+  2. Above the list of files, click the green button _Code_;
+  3. Choose your preferred method for cloning: HTTPS, SSH, or Github CLI. Click the copy button to copy the URL to your clipboard.
+  4. Open Git Bash.
+  5. Change the current working directory to the location where you want the cloned directory.
+  6. Type git clone, and then paste the URL you copied earlier.
+  7. Press Enter. Your local clone will be created.
