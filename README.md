@@ -12,9 +12,34 @@
 
 https://darioc18.github.io/memory-game/
 
+## Table of Contents <!-- omit in toc -->
+
+- [Brief](#brief)
+- [User Stories](#user-stories)
+- [Design](#design)
+  - [Wireframes](#wireframes)
+  - [Colors](#colors)
+  - [Typography](#typography)
+  - [Imagery](#imagery)
+- [Features](#features)
+  - [The Grid](#the-grid)
+  - [Time and Flips](#time-and-flips)
+  - [Restart](#restart-option)
+  - [Win pop-up screen](#win-pop-up-screen)
+  - [404 Page](#404-page)
+  - [Potential Features](#potential-features)
+- [Responsive Design](#responsive-design)
+- [Accessibility](#accessibility)
+- [Testing](#testing)
+- [Bugs solved](#bugs-solved)
+- [Technologies Used](#technologies-used)
+- [Deployment](#deployment)
+- [Credits](#credits)
+- [Aknowledgments](#aknowledgments)
+
 ## Brief
 
-Wizarding Memory Quest is an enchanting Harry Potter-themed card-matching game. With 16 designed cards, players must rely on their memory and wits to find matching pairs. The rules mirror those of the classic memory card game, making it easy for both Harry Potter fans and new players to dive right in. Race against the clock and aim for the fewest moves to become a true wizarding champion.
+Wizarding Memory Quest is an enchanting Harry Potter-themed card-matching game. With 16 cards, players must rely on their memory to find matching pairs. The rules mirror those of the classic memory card game, making it easy for both Harry Potter fans and new players to dive right in. Race against the clock and aim for the fewest moves to become a true wizarding champion.
 
 ## User Stories
 
@@ -35,7 +60,7 @@ Target User for "Wizarding Memory Quest":
 Presented below are a series of wireframes illustrating the game's visual representation across a computer webpage and a mobile screen.
 ![Wireframes](assets/images/readme-images/wireframes.png)
 
-### Colours
+### Colors
 
 For the color palette, I took inspiration from the existing color palette used in the images of the cards. When the cards are not flipped, I aimed for a neutral palette to create a comfortable experience without overwhelming colors. This approach allows the flipped cards' colors to stand out and provide a pleasing visual contrast for users.
 I created a visual palette by using [coolors.co](https://coolors.co).
@@ -58,7 +83,7 @@ The back of the cards was designed in Photoshop, utilizing the same color palett
 
 ## Features
 
-The game comprises two pages: the main page featuring a grid of 16 cards and a popup win game screen.
+The game comprises two pages: the main page featuring a grid of 16 cards and an overlay win game screen, and a 404 error page.
 
 ### The Grid
 
@@ -73,7 +98,7 @@ Clicking on the first card activates the timer, and the flips tracker records ev
 
 ### Restart option
 
-Players have the option to restart the game by clicking the reset button, either on the main window or the win pop-up screen. Upon restarting, both the timer and the flip counter are reset to zero, providing users with a fresh start for a new round of magical memory challenges.
+Players have the option to restart the game by clicking the reset button, either on the main window or on the win pop-up screen. Upon restarting, both the timer and the flip counter are reset to zero, providing users with a fresh start for a new round of magical memory challenges.
 ![Reset button on home page](assets/images/readme-images/reset-homepage.gif)
 
 ### Win pop-up screen
@@ -81,10 +106,10 @@ Players have the option to restart the game by clicking the reset button, either
 When the user successfully flips all the matching cards, a semi-transparent win pop-up window displays the time taken to complete the game and the number of flips made. This feature adds a sense of challenge, encouraging players to aim for quicker completion times and fewer moves to achieve the best possible results.
 ![Reset button on pop-up page](assets/images/readme-images/reset-popup-page.gif)
 
-### 404 Page
+### 404 Error Page
 
-- This page is specifically designed for instances when the user enters an incorrect address in the search bar. It provides an option to easily return to the game.
-  ![404 Page](assets/images/readme-images/error-page.png)
+This page is specifically designed for instances when the user enters an incorrect address in the search bar. It provides an option to easily return to the game.
+![404 Page](assets/images/readme-images/error-page.png)
 
 ### Potential Features
 
@@ -95,7 +120,7 @@ The following features could be implemented in the future:
 
 ## Responsive Design
 
-This game is intended for mobile devices and other platforms, so it has been designed with responsiveness in mind. This ensures that the game's grid structure layout remains consistent across various devices, including desktop, laptop, tablet, and mobile, on both portrait and landscape mode, without compromising its visual appeal.
+This game is intended for mobile devices and other platforms, so it has been designed with responsiveness in mind. This ensures that the game's grid structure layout remains consistent across various devices, including desktop, laptop, tablet, and mobile, in both portrait and landscape modes, without compromising its visual appeal.
 
 ![Mobile portrait](assets/images/readme-images/mobile-portrait.png)
 ![Mobile landscape](assets/images/readme-images/mobile-landscape.png)
@@ -108,7 +133,7 @@ Throughout the coding process of this website, great attention has been given to
 
 - Providing alt attributes for every picture: By including descriptive alt attributes for all images on the website.
 
-- Adding aria-label to anchor elements: The use of aria-label attributes for link and icons enhances accessibility by providing additional information or descriptions that are not explicitly conveyed through visual elements alone.
+- Adding aria-label to anchor elements: The use of aria-label attributes for links and icons enhances accessibility by providing additional information or descriptions that are not explicitly conveyed through visual elements alone.
 
 - Verifying visibility with a contrast checker by inputting the appropriate RGB color values.
 
@@ -126,14 +151,15 @@ Please refer to the [TESTING.md](TESTING.md) file for all test-related documenta
 | --- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | 1   | My aim was to initiate the timer when the user clicked on the first card, so I inserted the `function timer()` within the `function flipCard()`. However, I noticed that the timer malfunctioned, accelerating each time I clicked on every other card.                                             | I found a solution on [Stack Overflow](https://stackoverflow.com/questions/68211977/how-to-invoke-a-function-on-only-the-first-click). By creating a boolean variable and implementing a check within the timer function, the issue was fixed, ensuring the timer worked properly |
 | 2   | I encountered a bug related to background images. I chose to include the background images through CSS instead of HTML, as I planned to update the image for specific media queries. However, I faced some issues in controlling the size and position of the background images using `object-fit`. | I used `background-size`, which specifically manages background elements in CSS. Unlike `object-fit`, which applies only to HTML `<img>` elements.                                                                                                                                |
-| 3   | Clicking on the last two matching cards triggered the win screen to appear before the card flipping animation was completed.                                                                                                                                                                        | To resolve this issue, I implemented a solution using the `setTimeout` global function. By introducing a delay, I ensured that the win pop-up screen would only appear after the card flipping animation had finished.                                                            |
+| 3   | Clicking on the last two matching cards triggered the win screen to appear before the card-flipping animation was completed.                                                                                                                                                                        | I used the `setTimeout` global function. By introducing a delay, the win pop-up screen would only appear after the card-flipping animation has finished.                                                                                                                          |
 
 ## Technologies Used
 
 - Languages
   - [HTML](https://developer.mozilla.org/en-US/docs/Web/HTML)
   - [CSS](https://developer.mozilla.org/en-US/docs/Web/CSS)
-- Frameworks and Porgrams
+  - [Javascript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+- Frameworks and Programs
   - [Git](https://developer.mozilla.org/en-US/docs/Glossary/Git)
   - [Github Pages](https://github.com/)
   - [Visual Studio Code](https://code.visualstudio.com/)
@@ -196,4 +222,4 @@ The website was successfully deployed using GitHub Pages.
 
 ## Aknowledgments
 
-I would like to express my gratitude to my Code Institute mentor, Aleksei Konovalov and my cohort facilitator at Code Institute Alan Bushell for their guidance and clear advice to build this project.
+I would like to express my gratitude to my Code Institute mentor, [Aleksei Konovalov](https://github.com/lexach91), and my cohort facilitator at Code Institute Alan Bushell for their guidance and clear advice to build this project.
