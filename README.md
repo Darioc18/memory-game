@@ -81,6 +81,11 @@ Players have the option to restart the game by clicking the reset button, either
 When the user successfully flips all the matching cards, a semi-transparent win pop-up window displays the time taken to complete the game and the number of flips made. This feature adds a sense of challenge, encouraging players to aim for quicker completion times and fewer moves to achieve the best possible results.
 ![Reset button on pop-up page](assets/images/readme-images/reset-popup-page.gif)
 
+### 404 Page
+
+- This page is specifically designed for instances when the user enters an incorrect address in the search bar. It provides an option to easily return to the game.
+  ![404 Page](assets/images/readme-images/error-page.png)
+
 ### Potential Features
 
 The following features could be implemented in the future:
@@ -104,6 +109,10 @@ Throughout the coding process of this website, great attention has been given to
 - Providing alt attributes for every picture: By including descriptive alt attributes for all images on the website.
 
 - Adding aria-label to anchor elements: The use of aria-label attributes for link and icons enhances accessibility by providing additional information or descriptions that are not explicitly conveyed through visual elements alone.
+
+- Verifying visibility with a contrast checker by inputting the appropriate RGB color values.
+
+![Color contrast checker](assets/images/readme-images/color-contrast-checker.PNG)
 
 With these considerations, I aimed to make the website more accessible and user-friendly.
 
@@ -139,6 +148,7 @@ Please refer to the [TESTING.md](TESTING.md) file for all test-related documenta
   - [W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/)
   - [JSHint](https://jshint.com/)
   - [Favicon.io](https://favicon.io/)
+  - [Coolors](https://coolors.co/)
 
 ## Deployment
 
