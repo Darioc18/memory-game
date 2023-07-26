@@ -7,16 +7,17 @@ In order to confirm the correct functionality:
 
 ## Manual Testing
 
-| Page                          | Action                       | Expected Result                                                                                                 | Tested | Passed |
-| ----------------------------- | ---------------------------- | --------------------------------------------------------------------------------------------------------------- | ------ | ------ |
-| Homepage                      | Click on every single card.  | The card should flip and reveal the image on the other side.                                                    | ✔      | ✔      |
-| Homepage                      | Click on the first card      | The time starts running.                                                                                        | ✔      | ✔      |
-| Homepage                      | Click on any two cards       | The flip counter increments by 1                                                                                | ✔      | ✔      |
-| Homepage                      | Click on two matching cards  | Both cards will remain in the flipped position.                                                                 | ✔      | ✔      |
-| Homepage                      | Click on two different cards | After clicking on the second card, both cards will flip back to their original position.                        | ✔      | ✔      |
-| Homepage                      | Click on the 'Reset' button  | Both the timer and the flip counter are reset to zero, providing users with a fresh start                       | ✔      | ✔      |
-| Homepage / Win overlay screen | Flip all the matching cards  | A semi-transparent win pop-up window displays the time taken to complete the game and the number of flips made. | ✔      | ✔      |
-| Win overlay screen            | Click on the 'Reset' button  | The user gets redirected to the home page and both the timer and the flip counter are reset to zero             | ✔      | ✔      |
+| Page                          | Action                                     | Expected Result                                                                                                 | Tested | Passed |
+| ----------------------------- | ------------------------------------------ | --------------------------------------------------------------------------------------------------------------- | ------ | ------ |
+| Homepage                      | Click on every single card.                | The card should flip and reveal the image on the other side.                                                    | ✔      | ✔      |
+| Homepage                      | Click on the first card                    | The time starts running.                                                                                        | ✔      | ✔      |
+| Homepage                      | Click on any two cards                     | The flip counter increments by 1                                                                                | ✔      | ✔      |
+| Homepage                      | Click on two matching cards                | Both cards will remain in the flipped position.                                                                 | ✔      | ✔      |
+| Homepage                      | Click on two different cards               | After clicking on the second card, both cards will flip back to their original position.                        | ✔      | ✔      |
+| Homepage                      | Click on the 'Reset' button                | Both the timer and the flip counter are reset to zero, providing users with a fresh start                       | ✔      | ✔      |
+| Homepage footer               | Click on the 'Github' and 'Linkedin' icons | The user is redirected to the corresponding Github or Linkedin profile in another tab                           | ✔      | ✔      |
+| Homepage / Win overlay screen | Flip all the matching cards                | A semi-transparent win pop-up window displays the time taken to complete the game and the number of flips made. | ✔      | ✔      |
+| Win overlay screen            | Click on the 'Reset' button                | The user gets redirected to the home page and both the timer and the flip counter are reset to zero             | ✔      | ✔      |
 
 ## Validator testing
 
