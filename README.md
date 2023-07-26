@@ -58,6 +58,7 @@ Target User for "Wizarding Memory Quest":
 ### Wireframes
 
 Presented below are a series of wireframes illustrating the game's visual representation across a computer webpage and a mobile screen.
+
 ![Wireframes](assets/images/readme-images/wireframes.png)
 
 ### Colors
@@ -72,8 +73,11 @@ I created a visual palette by using [coolors.co](https://coolors.co).
 I chose to incorporate two fonts in the design; one for the title, which draws inspiration from Harry Potter's popular font, evoking a sense of nostalgia and familiarity, and a suitable Google font that complements the game's visual style:
 
 - Google fonts: [Yusei Magic](https://fonts.google.com/?query=yusei+magic)
+
   ![google font](assets/images/readme-images/google-font.png)
+
 - CDN fonts: [Harry Potter Font Family](https://www.cdnfonts.com/harry-potter.font)
+
   ![cdn font](assets/images/readme-images/harry-potter-font.png)
 
 ### Imagery
@@ -94,21 +98,25 @@ On the main page, players can flip the cards by clicking on them, revealing the 
 ### Time and Flips
 
 Clicking on the first card activates the timer, and the flips tracker records every instance when the user flips two cards.
+
 ![Time & Flips features](assets/images/readme-images/time-flips.gif)
 
 ### Restart option
 
 Players have the option to restart the game by clicking the reset button, either on the main window or on the win pop-up screen. Upon restarting, both the timer and the flip counter are reset to zero, providing users with a fresh start for a new round of magical memory challenges.
+
 ![Reset button on home page](assets/images/readme-images/reset-homepage.gif)
 
 ### Win pop-up screen
 
 When the user successfully flips all the matching cards, a semi-transparent win pop-up window displays the time taken to complete the game and the number of flips made. This feature adds a sense of challenge, encouraging players to aim for quicker completion times and fewer moves to achieve the best possible results.
+
 ![Reset button on pop-up page](assets/images/readme-images/reset-popup-page.gif)
 
 ### 404 Error Page
 
 This page is specifically designed for instances when the user enters an incorrect address in the search bar. It provides an option to easily return to the game.
+
 ![404 Page](assets/images/readme-images/error-page.png)
 
 ### Potential Features
@@ -123,6 +131,7 @@ The following features could be implemented in the future:
 This game is intended for mobile devices and other platforms, so it has been designed with responsiveness in mind. This ensures that the game's grid structure layout remains consistent across various devices, including desktop, laptop, tablet, and mobile, in both portrait and landscape modes, without compromising its visual appeal.
 
 ![Mobile portrait](assets/images/readme-images/mobile-portrait.png)
+
 ![Mobile landscape](assets/images/readme-images/mobile-landscape.png)
 
 ## Accessibility

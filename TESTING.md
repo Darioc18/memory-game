@@ -25,10 +25,13 @@ In order to confirm the correct functionality:
 The website has been run through the W3C Markup validation service CSS validation service, and JSHint:
 
 - Homepage
+
   - HTML: No errors were returned when passing through the official [W3C HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarioc18.github.io%2Fmemory-game%2F)
   - CSS: No errors were returned when passing through the official [W3C CSS validator](https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fdarioc18.github.io%2Fmemory-game%2F&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en)
   - Javascript: No errors were returned when passing through the official
+
     ![JSHint validator](assets/images/readme-images/jshint-validator.png)
+
 - 404 Page
   - HTML: No errors were returned when passing through the official [W3C HTML validator](https://validator.w3.org/nu/?doc=https%3A%2F%2Fdarioc18.github.io%2Fmemory-game%2F404)
 
@@ -37,7 +40,9 @@ The website has been run through the W3C Markup validation service CSS validatio
 Google Lighthouse in Google's Chrome Developer Tools was used to test the performance of the website. All elements performed well.
 
 - Homepage:
+
   ![Performance test using Lighthouse](assets/images/readme-images/lighthouse.png)
 
 - 404 Page:
+
   ![Performance test using Lighthouse](assets/images/readme-images/lighthouse-404-page.png)
