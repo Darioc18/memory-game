@@ -20,6 +20,13 @@ In order to confirm the correct functionality:
 | Win overlay screen            | Click on the 'Reset' button                | The user gets redirected to the home page and both the timer and the flip counter are reset to zero             | ✔      | ✔      |
 | 404 page                      | Click on the 'Alohomora' button            | The user gets redirected to the home page and can start a new game                                              | ✔      | ✔      |
 
+## Testing User Stories
+
+- New Users: I desire a fast-loading and user-friendly game that can be easily played on various devices.
+  _The website passed all performance testing metrics, is fully responsiveness on all devices, and is usable across various browsers. It successfully passes accessibility testing._
+- Returning Users: As a player, I'm excited to put my abilities to the test once more. I aim to improve my score and challenge other players
+  _The game creates a competitive and engaging environment by offering a time and flip indicator, enabling users to measure their performance._
+
 ## Validator testing
 
 The website has been run through the W3C Markup validation service CSS validation service, and JSHint:
