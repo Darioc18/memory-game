@@ -37,7 +37,7 @@ Presented below are a series of wireframes illustrating the game's visual repres
 
 ### Colours
 
-For the color palette, I drew inspiration from the existing color palette used in the images of the cards. This allowed me to create a harmonious and cohesive set of colors for the game.
+For the color palette, I took inspiration from the existing color palette used in the images of the cards. When the cards are not flipped, I aimed for a neutral palette to create a comfortable experience without overwhelming colors. This approach allows the flipped cards' colors to stand out and provide a pleasing visual contrast for users.
 I created a visual palette by using [coolors.co](https://coolors.co).
 
 ![Color palette](assets/images/readme-images/palette.png)
@@ -160,6 +160,7 @@ The website was successfully deployed using GitHub Pages.
   4.  Click the green button _Create fork_.
 
 - To clone the repository:
+
   1. Go to the [GitHub repository](https://github.com/Darioc18/memory-game);
   2. Above the list of files, click the green button _Code_;
   3. Choose your preferred method for cloning: HTTPS, SSH, or Github CLI. Click the copy button to copy the URL to your clipboard.
@@ -167,3 +168,22 @@ The website was successfully deployed using GitHub Pages.
   5. Change the current working directory to the location where you want the cloned directory.
   6. Type git clone, and then paste the URL you copied earlier.
   7. Press Enter. Your local clone will be created.
+
+## Credits
+
+### Content
+
+- The social media icons were taken from [Font Awesome](https://fontawesome.com/)
+- Memory card game inspiration and tutorial from [YouTube](https://www.youtube.com/watch?v=ZniVgo8U7ek&t=171s)
+- To make the timer start when clicking on the first card, I looked for suggestions on [Stack Overflow](https://stackoverflow.com/questions/65954053/why-is-my-memory-game-not-working-i-cant-flip-the-cards-or-make-the-game-start)
+- Correct implementation of the Fisher-Yates Shuffle algorithm was taken from this video [YouTube](https://youtu.be/3uuQ3g92oPQ)
+- I checked the correct use of `setTimeout()` from [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/API/setTimeout)
+
+### Media
+
+- All the card images were sourced from free downloads at [freebbble icon set](http://freebbble.com/harry-potter-icon-set/)
+- The background was taken from free download at [WallpaperAccess](https://wallpaperaccess.com/always-harry-potter) and adapted to the game screen sizes by using Photoshop
+
+## Aknowledgments
+
+I would like to express my gratitude to my Code Institute mentor, Aleksei Konovalov and my cohort facilitator at Code Institute Alan Bushell for their guidance and clear advice to build this project.
