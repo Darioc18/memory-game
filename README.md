@@ -106,3 +106,7 @@ Throughout the coding process of this website, great attention has been given to
 - Adding aria-label to anchor elements: The use of aria-label attributes for link and icons enhances accessibility by providing additional information or descriptions that are not explicitly conveyed through visual elements alone.
 
 With these considerations, I aimed to make the website more accessible and user-friendly.
+
+## Testing
+
+Please refer to the [TESTING.md](TESTING.md) file for all test-related documentation.
