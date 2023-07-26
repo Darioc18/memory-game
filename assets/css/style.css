@@ -6,6 +6,7 @@
     --color2: rgb(32, 31, 45);
     --color3: rgb(0, 0, 0, 0.9);
     --color4: rgb(0, 0, 0, 0.9);
+    --color5: rgb(21, 45, 69);
 }
 
 * {
@@ -34,7 +35,7 @@ body {
 
 .game-title {
     text-align: center;
-    font-family: 'Harry Potter', sans-serif;
+    font-family: "Harry Potter", sans-serif;
     padding: 10px;
     font-size: 300%;
     color: var(--color1);
@@ -172,6 +173,67 @@ body {
 
 .social a {
     color: var(--color1);
+}
+
+/* Styling 404.html error page */
+
+.error-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    background-color: var(--color5);
+    color: var(--color1)
+}
+
+.error-image {
+    width: 100px;
+    height: 100px;
+}
+
+.error-message {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 20px;
+}
+
+.error-image {
+    position: relative;
+}
+
+.error-message span {
+    font-size: 800%;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+.error-text {
+    text-align: center;
+    font-size: 120%;
+    font-family: 'Yusei Magic', sans-serif;
+}
+
+#back-button {
+    margin-top: 10px;
+}
+
+.error-text a {
+    text-decoration: underline;    
+    font-weight: 600;
+    text-transform: uppercase;
+    font-family: 'Yusei Magic', sans-serif;    
+    
+    color: var(--color1);
+    font-size: 170%;
+}
+
+.error-text a:hover {
+    text-shadow: 0 0 10px var(--color1),
+                 0 0 20px var(--color1),
+                 0 0 40px var(--color1),
+                 0 0 80px var(--color1);
 }
 
 /* Keyframe for glowing Restart button */
